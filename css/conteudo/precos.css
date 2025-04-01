@@ -1,0 +1,189 @@
+#precos {
+  padding: 0px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin: 60px 0px;
+}
+#precos > hr {
+  width: 100%;
+  border: 1px solid #b2b2b24f;
+  margin-top: 100px;
+}
+.mes-ano {
+  display: flex;
+  gap: 5px;
+  color: #b2b2b2;
+  margin-top: 40px;
+}
+
+#precos p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+.content-precos {
+  width: fit-content;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-family: "Orbitron", sans-serif;
+  padding-top: 20px;
+}
+.content-precos hr {
+  border: 1px solid #b2b2b27c;
+}
+.preco {
+  width: 300px;
+  padding: 20px 25px 30px 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.preco h3 {
+  padding-top: 10px;
+  font-size: 1rem;
+  font-weight: 900;
+}
+.preco p {
+  padding: 10px 0 30px 0;
+  text-transform: initial;
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+}
+.preco span {
+  font-size: 0.8rem;
+  font-weight: lighter;
+  color: #b2b2b2;
+}
+.preco-beneficios {
+  padding-bottom: 40px;
+}
+.preco-beneficios span {
+  display: flex;
+  gap: 5px;
+  font-family: "Poppins", sans-serif;
+  text-transform: initial;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  padding-top: 8px;
+}
+
+/* SLIDE DO CONTEÚDO */
+
+.slider-precos {
+  overflow-x: hidden;
+  width: 750px;
+  scroll-behavior: smooth;
+  margin-top: 20px;
+}
+.slide-precos {
+  position: relative;
+  align-items: center;
+  width: 750px;
+}
+.slide-precos button {
+  border: 2px solid #d6fd51;
+  color: #d6fd51;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+.slide-precos button:first-of-type {
+  left: 0;
+  transform: translate(-180%, -50%);
+}
+.slide-precos button:last-of-type {
+  right: 0;
+  transform: translate(180%, -50%);
+}
+
+/* CSS DO BOTÃO CHECKED*/
+
+/* Estiliza o rótulo como um contêiner do switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 22px;
+}
+
+/* Esconde o checkbox padrão */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* O trilho do switch */
+.on-off {
+  position: absolute;
+  width: 80px;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffdd00;
+  border-radius: 22px;
+  transition: 0.4s;
+}
+
+/* O botão do switch */
+.on-off::before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 3px;
+  background-color: #000;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+/* Quando o checkbox está marcado */
+input:checked + .on-off {
+  background-color: #d6fd51;
+}
+/* Move o botão quando ativado */
+input:checked + .on-off::before {
+  transform: translateX(56px);
+}
+
+@media (max-width: 900px) {
+  .slider-precos,
+  .slide-precos {
+    width: 345px;
+  }
+}
+
+@media (max-width: 700px) {
+  .slide-precos button {
+    border: none;
+    width: 0px;
+    height: 0px;
+    cursor: pointer;
+  }
+  .slide-precos button:first-of-type {
+    left: 0;
+    transform: translate(-80%, -50%);
+  }
+  .slide-precos button:last-of-type {
+    right: 0;
+    transform: translate(80%, -50%);
+  }
+  .preco {
+    border-top: 1px solid #b2b2b28f;;
+    border-bottom: 1px solid #b2b2b28f;
+    border-radius: 16px;
+    padding-bottom: 60px;
+  }
+#precos > hr {
+  display: none;
+}
+}

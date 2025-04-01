@@ -1,0 +1,128 @@
+#avaliacoes {
+  padding: 0px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin: 60px 0px;
+  position: relative;
+}
+.avaliacoes-aluno {
+  position: absolute;
+  bottom: 50px;
+  right: 320px;
+}
+#avaliacoes > img {
+  width: 1000px;
+  height: 500px;
+  object-fit: cover;
+  object-position: right;
+  border-radius: 16px;
+  margin-top: 20px;
+}
+.avaliacao {
+  font-family: "Orbitron", sans-serif;
+  background-color: #d6fd51;
+  color: #000;
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  padding: 20px;
+  position: relative;
+}
+.avaliacao::before {
+  content: "❞";
+  position: absolute;
+}
+.avaliacao > p {
+  padding-top: 20px;
+  font-weight: bold;
+}
+.avaliacao > span {
+  font-weight: bold;
+  font-size: 0.7rem;
+  text-align: right;
+}
+.aluno-content {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.aluno {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.aluno > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.aluno p {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.aluno span {
+  font-size: 0.7rem;
+}
+.avaliacao-botoes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.avaliacao-botoes button {
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+
+@media (max-width: 1300px) {
+  .avaliacoes-aluno {
+    right: 12%;
+  }
+}
+@media (max-width: 900px) {
+  .avaliacoes-aluno {
+    right: 10%;
+  }
+  #avaliacoes > img {
+    width: 800px;
+    height: 450px;
+    object-position: right;
+  }
+}
+@media (max-width: 600px) {
+  .avaliacoes-aluno {
+    bottom: 20px;
+  }
+  #avaliacoes > img {
+    width: 500px;
+    height: 300px;
+    object-position: bottom;
+  }
+  .avaliacao {
+    width: 280px;
+  }
+  .avaliacao > p {
+    padding-top: 10px;
+    font-size: 0.8rem;
+  }
+  .aluno > img {
+    width: 30px;
+    height: 30px;
+  }
+  .aluno p {
+    font-size: 0.7rem;
+  }
+  .aluno span {
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 410px) {
+  .avaliacao {
+    width: 260px;
+  }
+}
+

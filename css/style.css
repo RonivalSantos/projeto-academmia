@@ -1,0 +1,13 @@
+@import "./global/global.css";
+@import "./global/header.css";
+@import "./global/footer.css";
+
+/* conteudo */
+@import "./conteudo/introducao.css";
+@import "./conteudo/sobre-gymteam.css";
+@import "./conteudo/coaches.css";
+@import "./conteudo/cronograma.css";
+@import "./conteudo/precos.css";
+@import "./conteudo/avaliacoes.css";
+@import "./conteudo/blog.css";
+@import "./conteudo/contato.css";

@@ -1,0 +1,149 @@
+#blog-container {
+  padding: 0px;
+  background-color: #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+.blog-texto {
+  padding: 0px 5%;
+  color: #fff;
+  text-align: center;
+}
+.blog-texto > h2 {
+  padding-top: 40px;
+}
+.blog-texto > p {
+  font-family: "Poppins", sans-serif;
+  padding-top: 20px;
+  text-align: center;
+  max-width: 60ch;
+}
+.slider-blog {
+  /* padding: 0px 5%; */
+  color: #fff;
+}
+.content-blog {
+  padding-top: 20px;
+  display: flex;
+  gap: 30px;
+}
+.blog {
+  font-family: "Poppins", sans-serif;
+  width: 250px;
+}
+.blog img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 16px;
+  box-shadow: 1px 0px 3px 0px #b2b2b2;
+  margin-bottom: 20px;
+}
+.blog p {
+  font-size: 0.7rem;
+  font-weight: lighter;
+  padding-top: 15px;
+  margin-bottom: 10px;
+}
+.blog a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.botao-blog {
+  font-family: "Orbitron", sans-serif;
+  color: #000;
+  font-weight: 500;
+  background-color: #d6fd51;
+  padding: 5px 10px;
+  margin-top: 20px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+/* -------- SLIDE DO BLOG --------- */
+.content-blog {
+  width: fit-content;
+  box-sizing: border-box;
+}
+.slider-blog {
+  overflow-x: hidden;
+  width: 812px;
+  scroll-behavior: smooth;
+}
+.slide-blog {
+  position: relative;
+  align-items: center;
+  width: 812px;
+}
+.slide-blog button {
+  border: 2px solid #d6fd51;
+  color: #d6fd51;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+.slide-blog button:first-of-type {
+  left: 0;
+  transform: translate(-200%, -200%);
+}
+.slide-blog button:last-of-type {
+  right: 0;
+  transform: translate(180%, -200%);
+}
+
+.length-dots-blog {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.dot-blog {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  transition: background 0.3s, opacity 0.3s;
+}
+
+.dot-blog.current {
+  background-color: white; /* Cor do dot ativo */
+}
+
+.dot-blog[style*="hidden"] {
+  visibility: hidden; /* Esconde o dot */
+}
+
+@media (max-width: 960px) {
+  .slider-blog,
+  .slide-blog {
+    width: 530px;
+  }
+  .blog-texto > p {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 700px) {
+  .slider-blog,
+  .slide-blog {
+    width: 253px;
+  }
+  .slide-blog button {
+    border: none;
+  }
+  #blog-container {
+    padding-bottom: 40px;
+  }
+  .slide-blog button:first-of-type {
+    transform: translate(-120%, -200%);
+  }
+  .slide-blog button:last-of-type {
+    transform: translate(120%, -200%);
+  }
+}

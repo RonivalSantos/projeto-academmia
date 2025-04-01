@@ -1,0 +1,249 @@
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+    url(/imgs/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.banner-menu {
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+  padding-top: 30px;
+  position: relative;
+  z-index: 1100;
+}
+.header-img {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.header-menu {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  gap: 60px;
+  color: #c2c2c2;
+}
+.header-menu li a:hover {
+  color: #d6fd51;
+}
+.login {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.banner-conteudo {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+.banner-conteudo h1 {
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  font-size: 6rem;
+  max-width: 10ch;
+  line-height: 0.9;
+}
+.banner-conteudo p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  max-width: 55ch;
+  padding-top: 30px;
+}
+.conteudo-botoes {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-family: "Orbitron", sans-serif;
+  padding-top: 30px;
+}
+.banner-faixa {
+  display: flex;
+  gap: 20px;
+  white-space: nowrap;
+  position: relative;
+  will-change: transform;
+}
+.slide {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  background-color: #d6fd51;
+  white-space: nowrap;
+}
+.faixa-texto {
+  flex-shrink: 0;
+  padding: 10px 0px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Esconde o menu e coloca ele fora da tela */
+#mobile-menu {
+  position: fixed;
+  top: 0;
+  padding-top: 80px;
+  right: -100%; /* Começa fora da tela */
+  width: 100%; /* Ajuste para maior ou menor */
+  height: 60%;
+  background: rgba(0, 0, 0, 0.9); /* Fundo escuro */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  transition: right 0.4s ease-in-out; /* Animação suave */
+  z-index: 1000; /* Para garantir que fique sobre o conteúdo */
+  border-bottom: 1px solid #c2c2c2ac;
+
+}
+
+/* Menu visível */
+#mobile-menu.ativo {
+  right: 0; /* Move para dentro da tela */
+}
+
+/* Itens do menu */
+#mobile-menu li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  list-style: none;
+  color: #fff;
+}
+
+#mobile-menu li a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+  text-transform: uppercase;
+}
+
+#mobile-menu li a:hover {
+  color: #d6fd51;
+}
+.menu-mobile-contatos {
+  display: flex;
+  gap: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #c2c2c2ac;
+}
+.menu-mobile-contatos li {
+  background-color: #2f2f2f;
+  border-radius: 16px;
+  padding: 10px;
+}
+.menu-mobile-login {
+  display: flex;
+  gap: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c2c2c2ac;
+}
+.botao-login {
+  background-color: #d6fd51;
+  color: #000 !important;
+  padding: 10px 15px;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.botao-login a:hover {
+  color: #000 !important;
+}
+
+/* Ícone do botão */
+#mobile-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  position: relative;
+}
+
+/* Efeito para alternar ícone do botão */
+.close {
+  display: none;
+}
+#mobile-btn.trocar .abrir {
+  display: none;
+}
+#mobile-btn.trocar .close {
+  display: block;
+}
+
+/* Fundo escuro ao abrir */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 900;
+}
+
+/* Torna a overlay visível quando o menu abre */
+.overlay.ativo {
+  opacity: 1;
+  visibility: visible;
+}
+
+#mobile-btn {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .header-menu {
+    display: none;
+  }
+  #mobile-btn {
+    border: none;
+    display: block;
+    background-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .banner-conteudo h1 {
+    font-size: 5rem;
+  }
+  .banner-conteudo {
+    padding-top: 150px;
+    padding-bottom: 80px;
+  }
+}
+@media (max-width: 750px) {
+  .banner-conteudo h1 {
+    font-size: 4rem;
+  }
+  .banner-conteudo p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 600px) {
+  .banner-conteudo h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+  .banner-conteudo p {
+    font-size: 0.8rem;
+    max-width: 50ch;
+  }
+  .conteudo-botoes {
+    flex-direction: column;
+  }
+  .faixa-texto {
+    font-size: 1rem;
+  }
+}
