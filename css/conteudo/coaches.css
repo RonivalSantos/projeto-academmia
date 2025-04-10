@@ -27,16 +27,15 @@
 .coaches {
   padding-top: 20px;
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 .coach {
   font-family: "Poppins", sans-serif;
-  width: 250px;
-
+  width: 345px;
 }
 .coach img {
-  width: 250px;
-  height: 250px;
+  width: 345px;
+  height: 300px;
   object-fit: cover;
   object-position: top;
   border-radius: 16px;
@@ -58,13 +57,13 @@
 }
 .slider-coaches {
   overflow-x: hidden;
-  width: 1090px;
+  width: 1075px;
   scroll-behavior: smooth;
 }
 .slide-coaches {
   position: relative;
   align-items: center;
-  width: 1090px;
+  width: 1075px;
 }
 .slide-coaches button {
   color: #d6fd51;
@@ -74,7 +73,7 @@
   position: absolute;
   top: 50%;
   cursor: pointer;
-} 
+}
 .slide-coaches button:first-of-type {
   left: 0;
   transform: translate(-120%, -50%);
@@ -110,24 +109,23 @@
 @media (max-width: 1180px) {
   .slider-coaches,
   .slide-coaches {
-    width: 810px;
+    width: 710px;
   }
 }
 @media (max-width: 900px) {
   .slider-coaches,
   .slide-coaches {
-    width: 530px;
+    width: 345px;
   }
   .coaches-texto > p {
     font-size: 0.8rem;
   }
-}
-@media (max-width: 700px) {
-  .slider-coaches,
-  .slide-coaches {
-    width: 250px;
+  #coaches-container {
+    padding-bottom: 40px;
   }
-#coaches-container {
-  padding-bottom: 40px;
 }
+@media (max-width: 600px) {
+  .slide-coaches button {
+    display: none;
+  }
 }

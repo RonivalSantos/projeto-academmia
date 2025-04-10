@@ -9,13 +9,16 @@
 .motivo-conteudo {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
   font-family: "Orbitron", sans-serif;
   padding-top: 20px;
 }
 .motivo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #2a2a2a;
-  width: 250px;
+  width: 300px;
   border-radius: 16px;
   padding: 20px 25px 30px 20px;
   text-transform: uppercase;
@@ -31,7 +34,13 @@
 }
 .saiba-mais {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+}
+.saiba-mais span a {
+  display: flex;
+  align-items: center;
+  gap: 3px;
 }
 .saiba-mais .raio {
   background-color: #d6fd51;
@@ -46,13 +55,13 @@
 }
 .slider {
   overflow-x: hidden;
-  width: 960px;
+  width: 1075px;
   scroll-behavior: smooth;
 }
 .slide-click {
   position: relative;
   align-items: center;
-  width: 960px;
+  width: 1075px;
 }
 .slide-click button {
   border: 2px solid #d6fd51;
@@ -97,24 +106,19 @@
 
 /* RESPONSIVIDADE */
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .slider,
   .slide-click {
-    width: 625px;
+    width: 715px;
   }
 }
-@media (max-width: 800px) {
-  .titulo-section {
-    font-size: 2rem;
-    text-align: center;
-  }
+@media (max-width: 900px) {
   .slider,
   .slide-click {
-    width: 300px;
+    width: 345px;
   }
   .slide-click button {
     border: none;
-    /* width: 50px; */
   }
   .slide-click button:first-of-type {
     left: 0;
@@ -123,5 +127,10 @@
   .slide-click button:last-of-type {
     right: 0;
     transform: translate(100%, -50%);
+  }
+}
+@media (max-width: 600px) {
+  .slide-click button {
+    display: none;
   }
 }

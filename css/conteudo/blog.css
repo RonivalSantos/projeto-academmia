@@ -27,14 +27,14 @@
 .content-blog {
   padding-top: 20px;
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 .blog {
   font-family: "Poppins", sans-serif;
-  width: 250px;
+  width: 343px;
 }
-.blog img {
-  width: 250px;
+.blog > img {
+  width: 343px;
   height: 250px;
   object-fit: cover;
   object-position: top;
@@ -49,11 +49,15 @@
   margin-bottom: 10px;
 }
 .blog a {
+  display: flex;
+  align-items: center;
+  gap: 3px;
   font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
 }
 .botao-blog {
+  max-width: 60%;
   font-family: "Orbitron", sans-serif;
   color: #000;
   font-weight: 500;
@@ -70,13 +74,13 @@
 }
 .slider-blog {
   overflow-x: hidden;
-  width: 812px;
+  width: 1075px;
   scroll-behavior: smooth;
 }
 .slide-blog {
   position: relative;
   align-items: center;
-  width: 812px;
+  width: 1075px;
 }
 .slide-blog button {
   border: 2px solid #d6fd51;
@@ -119,31 +123,27 @@
 .dot-blog[style*="hidden"] {
   visibility: hidden; /* Esconde o dot */
 }
-
-@media (max-width: 960px) {
+@media (max-width: 1200px) {
   .slider-blog,
   .slide-blog {
-    width: 530px;
+    width: 710px;
+  }
+}
+
+@media (max-width: 900px) {
+  .slider-blog,
+  .slide-blog {
+    width: 345px;
   }
   .blog-texto > p {
     font-size: 0.8rem;
   }
 }
-@media (max-width: 700px) {
-  .slider-blog,
-  .slide-blog {
-    width: 253px;
-  }
+@media (max-width: 600px) {
   .slide-blog button {
-    border: none;
+    display: none;
   }
   #blog-container {
     padding-bottom: 40px;
-  }
-  .slide-blog button:first-of-type {
-    transform: translate(-120%, -200%);
-  }
-  .slide-blog button:last-of-type {
-    transform: translate(120%, -200%);
   }
 }

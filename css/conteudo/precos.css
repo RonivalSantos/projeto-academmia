@@ -36,6 +36,9 @@
   border: 1px solid #b2b2b27c;
 }
 .preco {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 300px;
   padding: 20px 25px 30px 20px;
   text-transform: uppercase;
@@ -62,6 +65,8 @@
 }
 .preco-beneficios span {
   display: flex;
+  align-items: start;
+  text-align: start;
   gap: 5px;
   font-family: "Poppins", sans-serif;
   text-transform: initial;
@@ -163,12 +168,6 @@ input:checked + .on-off::before {
 }
 
 @media (max-width: 700px) {
-  .slide-precos button {
-    border: none;
-    width: 0px;
-    height: 0px;
-    cursor: pointer;
-  }
   .slide-precos button:first-of-type {
     left: 0;
     transform: translate(-80%, -50%);
@@ -178,12 +177,26 @@ input:checked + .on-off::before {
     transform: translate(80%, -50%);
   }
   .preco {
-    border-top: 1px solid #b2b2b28f;;
+    border-top: 1px solid #b2b2b28f;
     border-bottom: 1px solid #b2b2b28f;
     border-radius: 16px;
     padding-bottom: 60px;
   }
-#precos > hr {
-  display: none;
+  #precos > hr {
+    display: none;
+  }
+  .content-precos hr {
+    display: none;
+  }
 }
+@media (max-width: 600px) {
+  .slide-precos button {
+    display: none;
+  }
+  .preco p {
+    padding: 0px;
+  }
+  .preco-beneficios {
+    padding-bottom: 10px;
+  }
 }

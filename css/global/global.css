@@ -48,6 +48,12 @@ button {
   font-size: 2.8rem;
   text-transform: uppercase;
 }
+@media (max-width: 900px) {
+  .titulo-section {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}
 
 /* SECTION DA IMG BARRA TERRA ------------------ */
 #img-barra img {
@@ -63,8 +69,7 @@ button {
 @media (max-width: 600px) {
   #img-barra img {
     height: 250px;
-  object-position: top;
+    object-position: top;
   }
 }
 /* --------------------------------------------- */
-
