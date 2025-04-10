@@ -5,11 +5,10 @@
   align-items: center;
   justify-content: center;
   color: #fff;
-  margin: 60px 0px;
+  margin: 60px 0px 100px 0px;
   position: relative;
 }
 .avaliacoes-slide {
-
 }
 .avaliacoes-slider {
   position: absolute;
@@ -24,7 +23,6 @@
   gap: 10px;
   width: fit-content;
   box-sizing: border-box;
-
 }
 #avaliacoes > img {
   width: 1000px;
@@ -108,6 +106,9 @@
   }
 }
 @media (max-width: 600px) {
+  #avaliacoes {
+    margin: 30px 0px 60px 0px;
+  }
   .avaliacoes-slider {
     bottom: 20px;
   }
@@ -145,4 +146,3 @@
     width: 300px;
   }
 }
-

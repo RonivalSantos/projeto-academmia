@@ -4,15 +4,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 100px;
   padding-bottom: 100px;
 }
 .blog-texto {
   padding: 0px 5%;
   color: #fff;
   text-align: center;
-}
-.blog-texto > h2 {
-  padding-top: 40px;
 }
 .blog-texto > p {
   font-family: "Poppins", sans-serif;
@@ -144,6 +142,7 @@
     display: none;
   }
   #blog-container {
-    padding-bottom: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }

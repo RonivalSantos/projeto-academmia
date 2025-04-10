@@ -3,8 +3,7 @@
   flex-direction: column;
   align-items: center;
   color: #fff;
-  padding-top: 30px;
-  margin-bottom: 50px;
+  padding-top: 100px;
 }
 .motivo-conteudo {
   display: flex;
@@ -130,6 +129,9 @@
   }
 }
 @media (max-width: 600px) {
+  #motivo-gymteam {
+    padding-top: 60px;
+  }
   .slide-click button {
     display: none;
   }

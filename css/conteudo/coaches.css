@@ -4,15 +4,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 100px;
   padding-bottom: 100px;
 }
 .coaches-texto {
   padding: 0px 5%;
   color: #fff;
   text-align: center;
-}
-.coaches-texto > h2 {
-  padding-top: 40px;
 }
 .coaches-texto > p {
   font-family: "Poppins", sans-serif;
@@ -121,7 +119,8 @@
     font-size: 0.8rem;
   }
   #coaches-container {
-    padding-bottom: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 @media (max-width: 600px) {

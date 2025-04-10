@@ -62,6 +62,11 @@
   font-family: "Orbitron", sans-serif;
   padding-top: 30px;
 }
+.conteudo-botoes a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 .banner-faixa {
   display: flex;
   gap: 20px;
@@ -244,6 +249,6 @@
     flex-direction: column;
   }
   .faixa-texto {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 }
