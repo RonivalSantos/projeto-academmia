@@ -20,14 +20,14 @@
       </div>
       <nav class="js-menu">
         <ul class="header-menu">
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#planos">Planos</a></li>
-          <li><a href="#blog">Blog</a></li>
+          <li><a href="#banner">Início</a></li>
+          <li><a href="#precos">Planos</a></li>
+          <li><a href="#blog-container">Blog</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
       <div class="login">
-        <button class="login-btn">
+        <button class="login-btn" data-modal="abrir-login">
           <img src="./imgs/icones/usuario.svg" width="20px" height="20px" alt="ícone de usuário">
         </button>
         <button id="mobile-btn">
@@ -39,12 +39,12 @@
     <nav>
       <ul id="mobile-menu" class="js-menu">
         <ul class="menu-mobile-login">
-          <li><a href="#">Cadastre-se</a></li>
-          <li class="botao-login"><a href="#">Login</a></li>
+          <li><a data-modal="abrir-cadastro" href="#">Cadastre-se</a></li>
+          <li class="botao-login"><a data-modal="abrir-login" href="#">Login</a></li>
         </ul>
-        <li><img src="./imgs/icones/home.svg" width="20px"><a href="#inicio">Início</a></li>
-        <li><img src="./imgs/icones/planos-money.svg" width="20px"><a href="#planos">Planos</a></li>
-        <li><img src="./imgs/icones/blog.svg" width="25px"><a href="#blog">Blog</a></li>
+        <li><img src="./imgs/icones/home.svg" width="20px"><a href="#banner">Início</a></li>
+        <li><img src="./imgs/icones/planos-money.svg" width="20px"><a href="#precos">Planos</a></li>
+        <li><img src="./imgs/icones/blog.svg" width="25px"><a href="#blog-container">Blog</a></li>
         <li><img src="./imgs/icones/contact.svg" width="20px"><a href="#contato">Contato</a></li>
         <ul class="menu-mobile-contatos">
           <li><a href="#"><img src="./imgs/icones/whatsapp-icon.svg" width="25px"></a></li>
@@ -52,7 +52,6 @@
           <li><a href="#"><img src="./imgs/icones/gmail.svg" width="25px"></a></li>
         </ul>
       </ul>
-
     </nav>
     <div class="banner-conteudo">
       <h1>treine com profissionais</h1>
@@ -531,6 +530,51 @@
     </div>
   </footer>
 
+  <section class="modal-container" data-modal="container-login">
+    <div class="modal-container-login">
+      <div class="modal-login-conteudo">
+        <h2>Seja bem-vindo!</h2>
+        <p>Ainda não tem conta? <a href="#" id="abrir-cadastro">[ cadastre-se aqui ]</a></p>
+      </div>
+      <div class="modal-login">
+        <button data-modal="fechar" class="fechar">X</button>
+        <form action="">
+          <label for="email">Email</label>
+          <input type="text" for="email" id="email">
+
+          <label for="senha">Senha</label>
+          <input type="password" for="senha" id="senha">
+
+          <button type="submit">Entrar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="modal-container" data-modal="container-cadastro">
+    <div class="modal-container-login">
+      <div class="modal-cadastro-conteudo">
+        <h2>Crie sua conta!</h2>
+        <p>Já possui uma conta? <a href="#" id="abrir-login">[ fazer login ]</a></p>
+      </div>
+      <div class="modal-login">
+        <button data-modal="fechar-cadastro" class="fechar">X</button>
+        <form action="">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome">
+  
+          <label for="email-cadastro">Email</label>
+          <input type="text" id="email-cadastro">
+  
+          <label for="senha-cadastro">Senha</label>
+          <input type="password" id="senha-cadastro">
+  
+          <button type="submit">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
 
   <script type="module" src="./js/script.js"></script>
 </body>

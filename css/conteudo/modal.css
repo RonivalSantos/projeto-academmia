@@ -1,0 +1,144 @@
+.modal-container {
+  color: #fff;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.modal-container.ativo {
+  display: flex;
+}
+
+/* ------ animação modal ------- */
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.ativo .modal-container-login {
+  animation: modal 0.3s forwards;
+}
+/* ------------------------------- */
+.modal-container-login {
+  width: 1100px;
+  height: 550px;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  border-radius: 16px;
+  box-shadow: 0px 0px 3px 0px #fff;
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+}
+.modal-login-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #d6fd51;
+  border-radius: 16px 30% 30% 16px;
+  color: #000;
+}
+.modal-cadastro-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 16px 30% 30% 16px;
+  color: #000;
+}
+.modal-login-conteudo h2,
+.modal-cadastro-conteudo h2 {
+  font-family: "Orbitron", sans-serif;
+  padding-bottom: 10px;
+}
+.modal-login-conteudo p,
+.modal-cadastro-conteudo p {
+  font-size: 0.8rem;
+}
+.modal-login-conteudo p a,
+.modal-cadastro-conteudo p a {
+  font-weight: 500;
+  text-decoration: underline;
+}
+.modal-login {
+  border-radius: 0 16px 16px 0;
+  padding: 100px 80px;
+  position: relative;
+}
+.modal-login label {
+  display: block;
+  margin: 1rem 0 0.5rem 0;
+}
+.modal-login input {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 2px;
+  background-color: #ffffff33;
+  color: #fff;
+  box-sizing: border-box;
+}
+.modal-login button[type="submit"] {
+  display: block;
+  background-color: #d6fd51;
+  border-radius: 4px;
+  margin-top: 16px;
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+}
+.fechar {
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  background-color: #d6fd51;
+  top: -15px;
+  right: -15px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+@media (max-width: 1180px) {
+  .modal-container-login {
+    width: 820px;
+    height: 450px;
+  }
+  .modal-login {
+    padding: 60px 40px;
+  }
+}
+@media (max-width: 900px) {
+  .modal-container-login {
+    width: 550px;
+    grid-template-columns: 1fr;
+  }
+  .modal-login-conteudo, .modal-cadastro-conteudo {
+    grid-row: 2;
+    border-radius: 0 0 16px 16px;
+    padding: 30px 0px;
+  }
+}
+@media (max-width: 600px) {
+  .modal-container-login {
+    width: 350px;
+  }
+  .modal-login {
+    padding: 60px 20px;
+  }
+  .fechar {
+    top: 0;
+    right: 0;
+    border-radius: 0 16px;
+  }
+}
