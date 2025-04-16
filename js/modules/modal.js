@@ -1,22 +1,4 @@
-// export default function initModal() {}
-// const botaoAbrir = document.querySelectorAll('[data-modal="abrir-login"]');
-// const botaoFechar = document.querySelector('[data-modal="fechar"]');
-// const containerModal = document.querySelector('[data-modal="container"]');
-
-// function abrirModal(event) {
-//   event.preventDefault();
-//   containerModal.classList.add("ativo");
-// }
-// function fecharModal() {
-//   containerModal.classList.remove("ativo");
-// }
-// botaoAbrir.forEach((botao) => {
-//   botao.addEventListener("click", abrirModal);
-// });
-// botaoFechar.addEventListener("click", fecharModal);
-
-
-export default function initModal() {}
+export default function initModal() {
 
 const botaoAbrirLogin = document.querySelectorAll('[data-modal="abrir-login"]');
 const botaoFecharLogin = document.querySelector('[data-modal="fechar"]');
@@ -73,3 +55,4 @@ linkFazerLogin.addEventListener('click', (event) => {
   containerModalCadastro.classList.remove("ativo");   // fecha o modal de cadastro
   containerModalLogin.classList.add("ativo");         // abre o modal de login
 });
+}
